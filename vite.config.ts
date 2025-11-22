@@ -3,9 +3,10 @@ import react from '@vitejs/plugin-react';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  root: 'client',
   plugins: [react()],
-  base: './', // Ensures relative paths for assets for deployment flexibility
+  base: './',
   build: {
-    outDir: 'dist', // Specifies the output directory for the build
+    outDir: '../dist',
   },
 });
