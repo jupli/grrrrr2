@@ -1,0 +1,5 @@
+{
+  "name": "Website Pages React SPA",
+  "description": "A React single-page application (SPA) providing Home, About, and Contact pages, designed with Tailwind CSS for aesthetics. This application interprets the user's request for Node.js Express pages as a React frontend implementation with client-side routing. A simple Node.js server (index.js) is provided to serve the built React assets, accommodating the deployment requirements.",
+  "requestFramePermissions": []
+}

@@ -1,0 +1,35 @@
+{
+  "name": "website-pages",
+  "version": "1.0.0",
+  "description": "Simple website pages implemented as a React SPA. The 'start' script is configured to run the Node.js server (index.js) which serves the built React application for deployment. Frontend development with Vite, build, and linting scripts are also included.",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.24.1",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@types/express": "^4.17.21",
+    "@typescript-eslint/eslint-plugin": "^7.13.1",
+    "@typescript-eslint/parser": "^7.13.1",
+    "@vitejs/plugin-react": "^5.0.1",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-react-refresh": "^0.4.7",
+    "typescript": "^5.2.2",
+    "vite": "^5.3.1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
