@@ -8,7 +8,7 @@ const Home: React.FC = () => {
         Welcome to Our Website!
       </h1>
       <p className="text-lg md:text-xl text-gray-700 mb-6 max-w-2xl">
-        This is the home page of our simple React application, built with a focus on clean design and responsive user experience using Tailwind CSS.
+        This is the homeR page of our simple React application, built with a focus on clean design and responsive user experience using Tailwind CSS.
       </p>
       <Link
         to="/about"
