@@ -1,6 +1,6 @@
 import React from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
-import Home from './components/Home'; // Path remains relative as components will also be in src/
+import Home from './components/Home.tsx'; // Path remains relative as components will also be in src/
 import About from './components/About'; // Path remains relative as components will also be in src/
 import Contact from './components/Contact'; // Path remains relative as components will also be in src/
 
