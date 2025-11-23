@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { MemoryRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 // --- ICONS SVG (INLINE) ---
 // Ukuran default icon di set kecil (w-10 h-10) agar ringan dan tajam.
@@ -36,7 +36,7 @@ const Home = () => {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img
-            src="/images/photo1.png"
+            src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop"
             alt="Office Background"
             className="w-full h-full object-cover opacity-30"
           />
@@ -161,6 +161,58 @@ const Home = () => {
   );
 };
 
+// --- HALAMAN PENDUKUNG (Wajib ada untuk mencegah link error) ---
+const PagePlaceholder = ({ title }) => (
+  <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50 text-center p-6">
+    <div className="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mb-6 text-2xl animate-bounce">
+      ✨
+    </div>
+    <h1 className="text-4xl font-bold text-gray-800 mb-4">{title}</h1>
+    <p className="text-gray-500 max-w-md mb-8">
+      Halaman ini adalah demo untuk menunjukkan bahwa sistem routing berjalan dengan baik.
+    </p>
+    <Link to="/" className="text-blue-600 font-semibold hover:text-blue-800 hover:underline">
+      &larr; Kembali ke Home
+    </Link>
+  </div>
+);
 
 // --- APP COMPONENT UTAMA (Wajib ada untuk Router) ---
-export default Home;
+const App = () => {
+  return (
+    <Router>
+      <div className="antialiased bg-white min-h-screen">
+        
+        {/* Navbar Sticky */}
+        <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100 transition-all">
+          <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <Link to="/" className="text-2xl font-extrabold text-blue-700 flex items-center gap-2">
+              <span className="w-8 h-8 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg block"></span>
+              DigitalSol.
+            </Link>
+            
+            <div className="hidden md:flex gap-8 text-sm font-semibold text-gray-600">
+              <Link to="/" className="hover:text-blue-600 transition-colors">Home</Link>
+              <Link to="/about" className="hover:text-blue-600 transition-colors">About</Link>
+              <Link to="/contact" className="hover:text-blue-600 transition-colors">Contact</Link>
+            </div>
+
+            <button className="md:hidden text-gray-600 p-2">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" /></svg>
+            </button>
+          </div>
+        </nav>
+
+        {/* DEFINISI ROUTES */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<PagePlaceholder title="Tentang Kami" />} />
+          <Route path="/contact" element={<PagePlaceholder title="Hubungi Kami" />} />
+        </Routes>
+
+      </div>
+    </Router>
+  );
+};
+
+export default App; // Export App, bukan Home
