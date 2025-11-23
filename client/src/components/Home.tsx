@@ -56,7 +56,7 @@ const Home: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-14">
 
             <div className="bg-white rounded-2xl p-8 shadow hover:shadow-lg transition">
-              <img src="/images/cards-performance.svg" className="h-20 mx-auto" />
+              <img src="/images/gamb1.jpg" className="h-20 mx-auto" />
               <h3 className="mt-6 text-xl font-semibold text-gray-900 text-center">
                 Performa Tinggi
               </h3>
@@ -66,7 +66,7 @@ const Home: React.FC = () => {
             </div>
 
             <div className="bg-white rounded-2xl p-8 shadow hover:shadow-lg transition">
-              <img src="/images/cards-security.svg" className="h-20 mx-auto" />
+              <img src="/images/gamb2.jpg" className="h-20 mx-auto" />
               <h3 className="mt-6 text-xl font-semibold text-gray-900 text-center">
                 Keamanan Terjamin
               </h3>
@@ -76,7 +76,7 @@ const Home: React.FC = () => {
             </div>
 
             <div className="bg-white rounded-2xl p-8 shadow hover:shadow-lg transition">
-              <img src="/images/cards-design.svg" className="h-20 mx-auto" />
+              <img src="/images/gamb3.jpg" className="h-20 mx-auto" />
               <h3 className="mt-6 text-xl font-semibold text-gray-900 text-center">
                 Desain Premium
               </h3>
