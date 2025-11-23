@@ -6,18 +6,18 @@ const Home: React.FC = () => {
     <div className="flex flex-col">
 
       {/* HERO SECTION */}
-      <section className="relative h-[75vh] flex items-center justify-center text-white">
-        <img 
-          src="/images/hero.svg" 
-          alt="Hero" 
-          className="absolute inset-0 w-full h-full object-cover opacity-[0.65]" 
+      <section className="relative h-[75vh] flex items-center justify-center text-white overflow-hidden">
+        <img
+          src="/images/hero.svg"
+          alt="Hero"
+          className="absolute inset-0 w-full h-full object-cover opacity-60"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-950/70 via-blue-900/50 to-blue-800/40"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-950/80 via-blue-900/60 to-blue-800/40"></div>
 
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight leading-tight">
-            Solusi Digital Modern  
-            <br />Untuk Bisnis Masa Kini
+            Solusi Digital Modern
+            <br /> Untuk Bisnis Masa Kini
           </h1>
 
           <p className="mt-5 text-lg md:text-xl text-blue-100">
@@ -25,7 +25,7 @@ const Home: React.FC = () => {
           </p>
 
           <div className="mt-8 flex justify-center gap-4">
-            <Link 
+            <Link
               to="/about"
               className="px-6 py-3 rounded-xl bg-white text-blue-700 font-semibold shadow hover:bg-blue-50 transition"
             >
@@ -42,7 +42,6 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-
       {/* FEATURES SECTION */}
       <section className="bg-gray-50 py-20">
         <div className="max-w-7xl mx-auto px-6">
@@ -55,8 +54,13 @@ const Home: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-14">
 
+            {/* FEATURE 1 */}
             <div className="bg-white rounded-2xl p-8 shadow hover:shadow-lg transition">
-              <img src="/images/gamb1.jpg" className="h-20 mx-auto" />
+              <img
+                src="/images/gamb1.jpg"
+                alt="Performa"
+                className="h-20 w-auto object-contain mx-auto"
+              />
               <h3 className="mt-6 text-xl font-semibold text-gray-900 text-center">
                 Performa Tinggi
               </h3>
@@ -65,8 +69,13 @@ const Home: React.FC = () => {
               </p>
             </div>
 
+            {/* FEATURE 2 */}
             <div className="bg-white rounded-2xl p-8 shadow hover:shadow-lg transition">
-              <img src="/images/gamb2.jpg" className="h-20 mx-auto" />
+              <img
+                src="/images/gamb2.jpg"
+                alt="Keamanan"
+                className="h-20 w-auto object-contain mx-auto"
+              />
               <h3 className="mt-6 text-xl font-semibold text-gray-900 text-center">
                 Keamanan Terjamin
               </h3>
@@ -75,8 +84,13 @@ const Home: React.FC = () => {
               </p>
             </div>
 
+            {/* FEATURE 3 */}
             <div className="bg-white rounded-2xl p-8 shadow hover:shadow-lg transition">
-              <img src="/images/gamb3.jpg" className="h-20 mx-auto" />
+              <img
+                src="/images/gamb3.jpg"
+                alt="Desain"
+                className="h-20 w-auto object-contain mx-auto"
+              />
               <h3 className="mt-6 text-xl font-semibold text-gray-900 text-center">
                 Desain Premium
               </h3>
@@ -88,7 +102,6 @@ const Home: React.FC = () => {
           </div>
         </div>
       </section>
-
 
       {/* CTA SECTION */}
       <section className="py-20">
@@ -103,7 +116,7 @@ const Home: React.FC = () => {
               </p>
             </div>
 
-            <Link 
+            <Link
               to="/contact"
               className="px-8 py-4 rounded-xl bg-white text-blue-700 font-semibold text-lg shadow hover:bg-blue-50 transition"
             >
