@@ -1,16 +1,29 @@
-import React, { useState } from "react";
+import React from "react";
 import { MemoryRouter as Router, Routes, Route, Link } from "react-router-dom";
-import { Shield, Zap, Layout, ChevronRight, ArrowRight, Menu, X } from "lucide-react";
 
-// Halaman Home (Yang Anda kirim, sudah diperbaiki)
+// --- INLINE ICONS (Pengganti Lucide-React agar tidak error) ---
+const Zap = ({ className }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+);
+const Shield = ({ className }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+);
+const Layout = ({ className }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+);
+const ArrowRight = ({ className }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+);
+const ChevronRight = ({ className }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><polyline points="9 18 15 12 9 6"/></svg>
+);
+
+// Halaman Home
 const Home = () => {
   return (
     <div className="flex flex-col font-sans">
       
-      {/* HERO SECTION 
-          - Dikurangi tingginya jadi min-h-[70vh] agar tidak terlalu 'zoom'
-          - Overlay gradient diperhalus
-      */}
+      {/* HERO SECTION */}
       <section className="relative min-h-[70vh] flex items-center justify-center text-white overflow-hidden bg-gray-900">
         
         {/* Background Image dengan Fallback & Overlay */}
@@ -55,9 +68,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* FEATURES SECTION 
-          - Menggunakan Icon Vector (Lucide) alih-alih JPG agar ukuran konsisten & tidak pecah
-      */}
+      {/* FEATURES SECTION */}
       <section className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
