@@ -5,7 +5,7 @@ const Contact: React.FC = () => {
     <div className="flex flex-col gap-10">
       <section className="relative overflow-hidden rounded-2xl shadow-xl">
         <img
-          src="/images/contact-banner.svg"
+          src="/images/contact-banner.jpg"
           alt="Get in touch"
           className="absolute inset-0 h-full w-full object-cover"
         />
@@ -44,7 +44,7 @@ const Contact: React.FC = () => {
         </div>
         <div className="rounded-xl overflow-hidden shadow">
           <img
-            src="/images/contact-office.svg"
+            src="/images/contact-office.jpg"
             alt="Office"
             className="h-full w-full object-cover"
           />

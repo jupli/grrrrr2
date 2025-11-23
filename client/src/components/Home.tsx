@@ -6,7 +6,7 @@ const Home: React.FC = () => {
     <div className="flex flex-col gap-10">
       <section className="relative overflow-hidden rounded-2xl shadow-xl">
         <img
-          src="/images/hero.svg"
+          src="/images/hero.jpg"
           alt="Team collaboration"
           className="absolute inset-0 h-full w-full object-cover"
         />
@@ -34,7 +34,7 @@ const Home: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="group rounded-xl bg-white p-6 shadow hover:shadow-lg transition">
             <img
-              src="/images/cards-performance.svg"
+              src="/images/performance.jpg"
               alt="Performance"
               className="h-40 w-full rounded-lg object-cover"
             />
@@ -43,7 +43,7 @@ const Home: React.FC = () => {
           </div>
           <div className="group rounded-xl bg-white p-6 shadow hover:shadow-lg transition">
             <img
-              src="/images/cards-security.svg"
+              src="/images/security.jpg"
               alt="Security"
               className="h-40 w-full rounded-lg object-cover"
             />
@@ -52,7 +52,7 @@ const Home: React.FC = () => {
           </div>
           <div className="group rounded-xl bg-white p-6 shadow hover:shadow-lg transition">
             <img
-              src="/images/cards-design.svg"
+              src="/images/design.jpg"
               alt="Design"
               className="h-40 w-full rounded-lg object-cover"
             />

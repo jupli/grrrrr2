@@ -13,7 +13,7 @@ const About: React.FC = () => {
           </div>
           <div>
             <img
-              src="/images/about-mission.svg"
+              src="/images/about-mission.jpg"
               alt="Our mission"
               className="rounded-xl shadow-lg w-full h-auto object-cover"
             />
