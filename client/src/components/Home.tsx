@@ -1,5 +1,5 @@
 import React from "react";
-import { MemoryRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 // --- ICONS SVG (INLINE) ---
 // Ukuran default icon di set kecil (w-10 h-10) agar ringan dan tajam.
@@ -25,25 +25,21 @@ const IconLayout = () => (
   </svg>
 );
 
-// --- HALAMAN UTAMA ---
+// --- HALAMAN UTAMA (Kode Anda) ---
 const Home = () => {
   return (
     <div className="flex flex-col font-sans text-gray-800 bg-white">
 
-      {/* HERO SECTION 
-          - min-h-[600px] menjamin tinggi tidak terlalu kecil di layar HP, 
-          - h-[75vh] menjamin tidak terlalu tinggi (zoom) di layar laptop.
-      */}
+      {/* HERO SECTION */}
       <section className="relative min-h-[600px] h-[75vh] flex items-center justify-center overflow-hidden bg-slate-900">
         
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop"
+            src="/images/photo1.png"
             alt="Office Background"
             className="w-full h-full object-cover opacity-30"
           />
-          {/* Overlay Gradient */}
           <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-purple-900/80 mix-blend-multiply"></div>
         </div>
 
@@ -92,10 +88,7 @@ const Home = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            
-            {/* Kartu Fitur 1 */}
             <div className="group bg-white p-8 rounded-3xl shadow-sm hover:shadow-2xl transition-all duration-300 border border-gray-100 text-center">
-              {/* Container Icon TERKUNCI UKURANNYA (w-16 h-16) */}
               <div className="w-16 h-16 mx-auto bg-blue-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-blue-200 group-hover:scale-110 transition-transform duration-300 rotate-3 group-hover:rotate-6">
                 <IconRocket />
               </div>
@@ -105,7 +98,6 @@ const Home = () => {
               </p>
             </div>
 
-            {/* Kartu Fitur 2 */}
             <div className="group bg-white p-8 rounded-3xl shadow-sm hover:shadow-2xl transition-all duration-300 border border-gray-100 text-center">
               <div className="w-16 h-16 mx-auto bg-indigo-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-indigo-200 group-hover:scale-110 transition-transform duration-300 -rotate-3 group-hover:-rotate-6">
                 <IconShield />
@@ -116,7 +108,6 @@ const Home = () => {
               </p>
             </div>
 
-            {/* Kartu Fitur 3 */}
             <div className="group bg-white p-8 rounded-3xl shadow-sm hover:shadow-2xl transition-all duration-300 border border-gray-100 text-center">
               <div className="w-16 h-16 mx-auto bg-purple-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-purple-200 group-hover:scale-110 transition-transform duration-300 rotate-3 group-hover:rotate-6">
                 <IconLayout />
@@ -126,7 +117,6 @@ const Home = () => {
                 Desain antarmuka yang intuitif, estetik, dan nyaman digunakan di berbagai perangkat.
               </p>
             </div>
-
           </div>
         </div>
       </section>
@@ -134,7 +124,6 @@ const Home = () => {
       {/* CTA SECTION */}
       <section className="py-20 px-6">
         <div className="max-w-6xl mx-auto bg-gradient-to-br from-blue-700 to-indigo-800 rounded-[2.5rem] p-10 md:p-20 text-center text-white shadow-2xl relative overflow-hidden">
-          {/* Elemen Dekorasi */}
           <div className="absolute top-0 left-0 w-72 h-72 bg-white opacity-5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
           <div className="absolute bottom-0 right-0 w-72 h-72 bg-purple-500 opacity-20 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
           
@@ -168,64 +157,10 @@ const Home = () => {
           <p className="text-xs text-slate-500">© 2024 Digital Solutions Inc.</p>
         </div>
       </footer>
-
     </div>
   );
 };
 
-// --- HALAMAN PENDUKUNG (Agar link tidak error) ---
-const PagePlaceholder = ({ title }) => (
-  <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50 text-center p-6">
-    <div className="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mb-6 text-2xl animate-bounce">
-      ✨
-    </div>
-    <h1 className="text-4xl font-bold text-gray-800 mb-4">{title}</h1>
-    <p className="text-gray-500 max-w-md mb-8">
-      Halaman ini adalah demo untuk menunjukkan bahwa sistem routing React (SPA) berjalan dengan baik.
-    </p>
-    <Link to="/" className="text-blue-600 font-semibold hover:text-blue-800 hover:underline">
-      &larr; Kembali ke Home
-    </Link>
-  </div>
-);
 
-// --- MAIN APP COMPONENT ---
-const App = () => {
-  return (
-    <Router>
-      <div className="antialiased bg-white min-h-screen">
-        
-        {/* Navbar Sticky */}
-        <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100 transition-all">
-          <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <Link to="/" className="text-2xl font-extrabold text-blue-700 flex items-center gap-2">
-              <span className="w-8 h-8 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg block"></span>
-              DigitalSol.
-            </Link>
-            
-            {/* Desktop Menu */}
-            <div className="hidden md:flex gap-8 text-sm font-semibold text-gray-600">
-              <Link to="/" className="hover:text-blue-600 transition-colors">Home</Link>
-              <Link to="/about" className="hover:text-blue-600 transition-colors">About</Link>
-              <Link to="/contact" className="hover:text-blue-600 transition-colors">Contact</Link>
-            </div>
-
-            {/* Mobile Menu Button (Visual Only) */}
-            <button className="md:hidden text-gray-600 p-2">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" /></svg>
-            </button>
-          </div>
-        </nav>
-
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<PagePlaceholder title="Tentang Kami" />} />
-          <Route path="/contact" element={<PagePlaceholder title="Hubungi Kami" />} />
-        </Routes>
-
-      </div>
-    </Router>
-  );
-};
-
-export default App;
+// --- APP COMPONENT UTAMA (Wajib ada untuk Router) ---
+export default Home;
